@@ -24,6 +24,7 @@ This application allows you to view an entire employee directory with quickl acc
 Run npm i in terminal to install all needed dependencies. 
 
 ## Use
+https://user-images.githubusercontent.com/82417321/132965783-a3877e81-909e-4fcd-a058-bbc67935f56c.mov
 
 ## License
 ### `This application is under the MIT license.`
