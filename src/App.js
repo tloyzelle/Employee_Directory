@@ -12,4 +12,39 @@ const App = () => {
     const [empoyees, setEmployees] = useState([]);
     const [search, setSearch] = useState("");
     const [searchResults, setSearchResults] = useState([]);
+
+    const fetchEmployees = async () => {
+        setLoading(true);
+        try {
+            await API.search().them((res) => {
+                console.log(res);
+                setEmployees(
+                    res.data.results.map((e, i) => ({
+                        firstName: e.name.first,
+                        lastName: e.name.last,
+                        picture: e.picture.large,
+                        email: e.email,
+                        phone: e.phone,
+                        city: e.location.city,
+                        key: i,
+                    }))
+                );
+                setSearchResults(
+                    res.data.results.map((e, i) => ({
+                        firstName: e.name.first,
+                        lastName: e.name.last,
+                        picture: e.picture.large,
+                        email: e.email,
+                        phone: e.phone,
+                        city: e.location.city,
+                        key: i,
+                    }))
+                );
+            });
+            setLoading(false);
+        } catch (err) {
+            setLoading(false);
+            console.log(err);
+        }
+    };
 }
