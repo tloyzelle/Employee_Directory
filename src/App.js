@@ -3,7 +3,7 @@ import EmployeeCard from "./components/EmployeeCard";
 import SearchForm from "./components/SearchForm";
 import Wrapper from "./components/Wrapper";
 import Col from "./components/Col";
-import Lopading from "./components/Loading";
+import Loading from "./components/Loading";
 import API from "./utils/API";
 import "./App.css";
 
