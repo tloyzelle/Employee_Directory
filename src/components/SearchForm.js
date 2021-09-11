@@ -1,7 +1,7 @@
 import React from "react";
 
 const SearchForm = (props) => {
-    const inputEl = useRef("");
+    const inputEl = ('');
 
     const getSearchTerm = () => {
         props.searchKeyword(inputEl.current.value);
