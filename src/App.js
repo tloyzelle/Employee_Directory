@@ -115,10 +115,26 @@ const App = () => {
                                     <th>City</th>
                                 </tr>
                             </thead>
+
+                            {searchResults.map((e) => {
+                                return (
+                                    <EmployeeCard
+                                    picture = {e.picture}
+                                    firstName = {e.firstName}
+                                    lastName = {e.lastName}
+                                    email= {e.email}
+                                    phone = {e.email}
+                                    city = {e.phone}
+                                    key = {e.key}
+                                    />
+                                )
+                            })}
                         </table>
                     </Col>
                 </div>
             </div>
         </Wrapper>
     )
-}
+};
+
+export default App;
