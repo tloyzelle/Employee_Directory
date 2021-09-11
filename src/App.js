@@ -9,7 +9,7 @@ import "./App.css";
 
 const App = () => {
     const [loading, setLoading] = useState(true);
-    const [empoyees, setEmployees] = useState([]);
+    const [employees, setEmployees] = useState([]);
     const [search, setSearch] = useState("");
     const [searchResults, setSearchResults] = useState([]);
 
@@ -57,9 +57,9 @@ const App = () => {
         setSearch(search);
 
         if (search !== "") {
-            const newEmployeeList = employees.filter((employee) => {
+            const newEmployeeList = employees.filter((employees) => {
                 return (
-                    Object.values(employee)
+                    Object.values(employees)
                     .toLowerCase()
                     .includes(search.toLowerCase())
                 );
@@ -78,7 +78,7 @@ const App = () => {
         getAllEmployees();
     }, []);
 
-    useEffect(() => {}, [Employees]);
+    useEffect(() => {}, [employees]);
 
     if (loading) {
         return (
