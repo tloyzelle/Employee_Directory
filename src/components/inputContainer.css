@@ -1,0 +1,13 @@
+.customStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 400px) {
+    .customStyle {
+        flex-direction: column;
+        align-items: center        
+    }    
+}
