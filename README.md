@@ -1,4 +1,4 @@
-# Employee_Directory
+# employee-directory
 
 ## Table of Contents
 
